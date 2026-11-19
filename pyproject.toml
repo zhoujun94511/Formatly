@@ -1,0 +1,18 @@
+[tool.ruff]
+target-version = "py311"
+extend-exclude = [
+    ".verification",
+    ".formatly",
+    "reports",
+    "frontend/node_modules",
+    "frontend/dist",
+    "frontend/.vite",
+    "frontend/.vite-temp",
+]
+
+[tool.ruff.lint]
+select = [
+    "E9", "F",
+    "B006", "B008", "B012", "B018", "B020", "B023", "B026",
+    "PLW0120", "PLW0127", "RUF013",
+]

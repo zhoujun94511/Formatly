@@ -1,0 +1,14 @@
+pdfplumber>=0.11.9,<0.12
+# pdf_visibility.py imports pdfminer directly. pdfplumber still selects the exact build.
+pdfminer.six>=20231228
+pypdfium2>=5.15,<6
+Pillow>=11,<14
+jsonschema>=4.23,<5
+ruff>=0.16.5,<0.17
+pyright>=1.1.414,<1.2
+python-docx>=1.2,<2
+reportlab>=4.4.9,<5
+docling-parse>=7.25,<8
+psutil>=7,<8
+# Word/WPS COM is Windows-only. pip skips this line on macOS and Linux.
+pywin32>=310,<400; sys_platform == "win32"

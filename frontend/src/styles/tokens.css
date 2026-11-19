@@ -1,0 +1,176 @@
+:root {
+  font-family: "Segoe UI","PingFang SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color: var(--ink);
+  background: var(--canvas);
+  color-scheme: light;
+  font-size: 16px;
+  line-height: 1.65;
+  font-synthesis: none;
+  --brand: #2459d3;
+  --brand-strong: #1948b4;
+  --brand-soft: #edf2ff;
+  --brand-on: #fff;
+  --action-bg: #2459d3;
+  --action-hover: #1948b4;
+  --cyan: #22c7ef;
+  --ink: #1c283a;
+  --muted: #5d6d84;
+  --canvas: #f7f8fa;
+  --surface: #fff;
+  --surface-soft: #f2f5fa;
+  --surface-hover: #edf2fa;
+  --sidebar-bg: #f1f3f7;
+  --nav-hover: #e7ebf2;
+  --nav-active: #e2eafe;
+  --nav-active-ink: #1b4bb5;
+  --topbar-bg: rgba(255,255,255,.97);
+  --subtle: #617087;
+  --focus: #1455d9;
+  --control-disabled-bg: #e8edf4;
+  --control-disabled-ink: #66758d;
+  --success: #166b50;
+  --success-bg: #e8f8f1;
+  --success-line: #bddfce;
+  --warning: #89571a;
+  --warning-bg: #fff5e4;
+  --warning-line: #e7c997;
+  --danger: #a52e36;
+  --danger-bg: #fff0f0;
+  --danger-line: #efbfc3;
+  --info: #235baa;
+  --info-bg: #edf5ff;
+  --info-line: #c2daf7;
+  --review: #6946a6;
+  --review-bg: #f1edff;
+  --review-line: #d6c8ef;
+  --code-bg: #eef2f7;
+  --overlay: rgba(10,23,42,.46);
+  --dialog-shadow: 0 20px 60px rgba(10,30,70,.24);
+  --line: #e2e6ed;
+  --line-strong: #cbd3df;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgba(28,40,58,.025);
+  --sidebar-width: 236px;
+  --page-gutter: clamp(24px,2vw,40px);
+  --panel-padding: 24px;
+  --topbar-height: 64px;
+  --control-height: 44px;
+}
+@media screen {
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --brand: #93b7ff;
+    --brand-strong: #bdd1ff;
+    --brand-soft: #233650;
+    --action-bg: #315fc9;
+    --action-hover: #3c6edb;
+    --ink: #e7edf6;
+    --muted: #a6b4c7;
+    --subtle: #90a1ba;
+    --canvas: #101722;
+    --surface: #182130;
+    --surface-soft: #202c3e;
+    --surface-hover: #29374c;
+    --sidebar-bg: #131c29;
+    --nav-hover: #202d40;
+    --nav-active: #263c5e;
+    --nav-active-ink: #b5ceff;
+    --topbar-bg: rgba(24,33,48,.97);
+    --line: #303d51;
+    --line-strong: #53647e;
+    --focus: #a4c5ff;
+    --control-disabled-bg: #263247;
+    --control-disabled-ink: #94a3bb;
+    --success: #8cdec0;
+    --success-bg: #183b32;
+    --success-line: #336454;
+    --warning: #f0cb8f;
+    --warning-bg: #403321;
+    --warning-line: #78603a;
+    --danger: #ffb0b7;
+    --danger-bg: #442933;
+    --danger-line: #80505b;
+    --info: #a4c9ff;
+    --info-bg: #223751;
+    --info-line: #425e80;
+    --review: #d1bcff;
+    --review-bg: #342c4c;
+    --review-line: #645481;
+    --code-bg: #111b29;
+    --overlay: rgba(3,8,16,.7);
+    --shadow: 0 1px 2px rgba(0,0,0,.15);
+    --dialog-shadow: 0 20px 60px rgba(0,0,0,.45);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  min-width: 0;
+  scroll-behavior: auto;
+}
+body {
+  margin: 0;
+  min-width: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-size: 16px;
+}
+button,input,select,textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:not(main):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.visually-hidden {
+  position: absolute!important;
+  width: 1px!important;
+  height: 1px!important;
+  overflow: hidden!important;
+  clip: rect(0,0,0,0)!important;
+  white-space: nowrap!important;
+}
+h1,h2,h3,p {
+  margin-top: 0;
+}
+h1 {
+  font-size: clamp(32px,2.5vw,36px);
+  line-height: 1.25;
+  letter-spacing: -.035em;
+  margin: 0 0 10px;
+}
+h2 {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0;
+}
+h3 {
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0;
+}
+.muted,.field-help,.micro {
+  color: var(--muted);
+}
+.micro {
+  font-size: 13px;
+}
+img {
+  max-width: 100%;
+}
+fieldset {
+  min-width: 0;
+}
+a { color: var(--brand); }
+::placeholder { color: var(--muted); opacity: 1; }
+::selection { color: var(--ink); background: var(--brand-soft); }
+@media print {
+  :root { color-scheme: light; }
+  body { background: #fff; color: var(--ink); }
+  .theme-toggle { display: none !important; }
+}
+

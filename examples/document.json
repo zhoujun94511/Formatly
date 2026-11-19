@@ -1,0 +1,16 @@
+{
+  "schema": "formatly.document.v1",
+  "title": "毕业实习报告（合成示例）",
+  "paragraphs": [
+    { "text": "实习概况", "role": "heading", "level": 1 },
+    { "text": "本示例仅演示结构化材料接入，不代表学校正式模板。", "role": "body" },
+    "文本材料不包含实际纸张、字体和 Word 段落属性。"
+  ],
+  "fields": {
+    "name": "张三",
+    "student_id": "2026001",
+    "organization": "示例实习单位",
+    "start_date": "2026-03-01",
+    "end_date": "2026-06-01"
+  }
+}

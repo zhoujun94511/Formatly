@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "formatly-example-plugin"
+version = "1.0.0"
+description = "Minimal external plugin example for Formatly"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = ["formatly>=1.0.0"]
+
+[project.entry-points."formatly.plugins"]
+example-placeholders = "formatly_example:PlaceholderPlugin"
+
+[tool.setuptools]
+py-modules = ["formatly_example"]
+
+

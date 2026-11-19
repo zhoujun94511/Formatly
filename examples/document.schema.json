@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Formatly document v1",
+  "description": "结构化材料交换格式；不声明真实纸张、字体、签章或排版属性。读取不需要联网获取本 schema。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema"],
+  "properties": {
+    "schema": { "const": "formatly.document.v1" },
+    "title": { "type": "string" },
+    "paragraphs": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["text"],
+            "properties": {
+              "text": { "type": "string" },
+              "role": { "enum": ["body", "heading"], "default": "body" },
+              "level": { "type": "integer", "minimum": 1, "maximum": 6 }
+            }
+          }
+        ]
+      }
+    },
+    "fields": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "student_id": { "type": "string" },
+        "organization": { "type": "string" },
+        "start_date": { "type": "string" },
+        "end_date": { "type": "string" }
+      }
+    }
+  }
+}

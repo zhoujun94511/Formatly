@@ -1,0 +1,25 @@
+{
+  "id": "placeholder-example",
+  "name": "通用论文 · 占位文本示例插件",
+  "description": "先安装 examples/example-plugin，再导入此方案。额外检查XML段落中的示例占位文本，不评估内容真实性。",
+  "plugins": [
+    "docx-package",
+    "generic-format",
+    "example-placeholders"
+  ],
+  "settings": {
+    "page": {
+      "width_mm": 210,
+      "height_mm": 297,
+      "tolerance_mm": 1
+    },
+    "example_placeholders": {
+      "tokens": [
+        "此处填写",
+        "TODO",
+        "待补充"
+      ],
+      "level": "warning"
+    }
+  }
+}

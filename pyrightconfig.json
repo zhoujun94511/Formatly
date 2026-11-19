@@ -1,0 +1,7 @@
+{
+  "include": ["formatly", "scripts", "tests", "examples", "app.py", "start_dev.py"],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.11",
+  "typeCheckingMode": "basic"
+}
