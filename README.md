@@ -6,7 +6,10 @@
 
 **毕业论文与实习报告格式检测工具**
 
-[Python 3.11+](#快速开始) · [Vue 3](frontend/README.md) · [TypeScript](frontend/ARCHITECTURE.md) · [MIT License](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](#快速开始)
+[![Vue 3](https://img.shields.io/badge/Vue-3-4FC08D?logo=vuedotjs&logoColor=white)](frontend/README.md)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](frontend/ARCHITECTURE.md)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [中文](README.md) · [English](README_en.md)
 
